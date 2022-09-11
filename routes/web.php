@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RedirectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,12 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return RedirectController::redirect('/');
 });
 
-//Route::redirect('/' ,'http://ballymaloecookeryschool.ie');
 
-Route::redirect('/' ,[\App\Http\Controllers\GeneralRedirect::class,'general']);
 Route::get('/ballymaloe-cookery-school/{guestchef}', [\App\Http\Controllers\BallymaloeCookerySchoolRedirect::class, 'redirect']);
 
 Route::get('/ballymaloe-cookery-school/suppliers/{suppliername}', [\App\Http\Controllers\SupplierRedirectController::class, 'redirect']);
