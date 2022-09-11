@@ -23,12 +23,15 @@ class GeneralRedirect extends Controller
         return RedirectController::redirect('/');
     }
 
-
+    public static function redirect(){
+       return (new GeneralRedirect())->general();
+    }
 
     public static function RedirectList(){
 
 
         return  collect( [
+          ['/ ',''],
           ['/30Years/Winners',''],
 ['/5-week-summer-cookery-course','/cookery-courses/5-week-summer-cookery-course'],
 ['/all-courses/11-good-reasons-attend','/certificate-cookery-course/reasons-to-enrol'],
@@ -133,7 +136,7 @@ class GeneralRedirect extends Controller
 ['/content/welcome-ballymaloe-cookery-school',''],
 ['/content/wildside-catering',''],
 ['/cookery-book-store',''],
-['/cookery-courses',''],
+['/cookery-courses','/all-courses?filter=Short+Course'],
 ['/cookery-courses/about-our-short-courses',''],
 ['/cookery-courses/accommodation-short-courses',''],
 ['/cookery-courses/afternoon-cookery-classes',''],
@@ -183,8 +186,8 @@ class GeneralRedirect extends Controller
 ['/cookery-courses/week-list/all/20130826','{pattern}'],
 ['/cookery-courses?page=1',''],
 ['/cookery-school/travelling-ballymaloe-cookery-school',''],
-['/cookery-school-alumni/abra-berens',''],
-['/cooking-school/guest-chefs/full-list','/ballymaloe-cookery-school/past-pupil-stories'],
+['/cookery-school-alumni/abra-berens','/cookery-school-alumni/abra-berens'],
+['/cooking-school/guest-chefs/full-list','/ballymaloe-cookery-school/guest-chefs'],
 ['/events/WhatsOn',''],
 ['/full/ballymaloe-cookery-school-slide-show','/'],
 ['/gallery/alumni-stories-lucy-hyland','{pattern}'],

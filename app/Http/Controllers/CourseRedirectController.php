@@ -19,7 +19,7 @@ class CourseRedirectController extends Controller
 
     }
 
-    public function CourseList(Request $request, $duration){
+    public function CourseList(Request $request){
         return RedirectController::redirect('/all-courses',[]);
 
     }
