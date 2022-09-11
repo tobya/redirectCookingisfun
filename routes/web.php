@@ -18,7 +18,9 @@ Route::get('/', function () {
     return RedirectController::redirect('/');
 });
 
-Route::get('/error500', function (){})
+Route::get('/error500', function (){
+   throw new \Exception('500 Error');
+});
 
 Route::get('/ballymaloe-cookery-school/{guestchef}', [\App\Http\Controllers\BallymaloeCookerySchoolRedirect::class, 'redirect']);
 
