@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
 use Spatie\Url\Url;
@@ -25,6 +26,9 @@ class RedirectController extends Controller
             ->log('Redirect Happened');;
 
         if (app()->environment('production')){
+            if ($url == '/' || $url == ''){
+                return redirect($url, 302 );
+            }
             return redirect($url,301);
         }
         return view('show',['url' => $url],);
