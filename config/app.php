@@ -56,6 +56,7 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+    'redirect_url' => env('BALLYMALOECOOKERYSCHOOL_WEBSITE_URL'),
 
     'asset_url' => env('ASSET_URL'),
 

@@ -18,6 +18,7 @@ Route::get('/', function () {
     return RedirectController::redirect('/');
 });
 
+Route::get('/error500', function (){})
 
 Route::get('/ballymaloe-cookery-school/{guestchef}', [\App\Http\Controllers\BallymaloeCookerySchoolRedirect::class, 'redirect']);
 
