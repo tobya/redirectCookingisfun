@@ -29,7 +29,7 @@ Route::get('/cookery-courses/week-list/all/{date}',[\App\Http\Controllers\Course
 Route::get('/cookery-courses/course-list/duration/{duration}',[\App\Http\Controllers\CourseRedirectController::class, 'byDuration']);
 Route::get('/cookery-courses/course-list',[\App\Http\Controllers\CourseRedirectController::class, 'courselist']);
 
-Route::get('/cookery-courses/course-details/{courseid}/{?title}',\App\Http\Controllers\CourseRedirectController::class, 'course');
+Route::get('/cookery-courses/course-details/{courseid}/{?title}',[\App\Http\Controllers\CourseRedirectController::class, 'course']);
 
 Route::get('/cookery-school-alumni/{pastpupil}',[\App\Http\Controllers\BallymaloeCookerySchoolRedirect::class, 'alumni']);
 Route::get('/gallery/{gallery}',[\App\Http\Controllers\BallymaloeCookerySchoolRedirect::class, 'home']);
