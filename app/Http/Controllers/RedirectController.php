@@ -12,11 +12,13 @@ class RedirectController extends Controller
 {
     public static function redirect($urlblock, $queryparams = []){
 
-        $url = Url::fromString(config('app.redirect'));
+        $url = Url::fromString(config('redirect.main'));
         $url = $url->withPath($urlblock);
         $url = $url->withQueryParameters($queryparams);
         Log::info('[REDIRECT] ' . request()->fullUrl() . ' =>  ' . $url  );
+        Activity()->withProperties(['url' => request()->fullUrl(), 'redirect' => $url])->log('Redirect Happened');;
+        //echo 'here';
         return view('show',['url' => $url],);
-        //return redirect($url,301);
+        return redirect($url,301);
     }
 }

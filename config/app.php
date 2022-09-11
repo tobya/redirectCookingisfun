@@ -29,7 +29,7 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
-    'redirect' => env('BALLYMALOECOOKERYSCHOOL_WEBSITE_URL'),
+
 
     /*
     |--------------------------------------------------------------------------
