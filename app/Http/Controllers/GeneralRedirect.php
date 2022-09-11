@@ -12,7 +12,13 @@ class GeneralRedirect extends Controller
 
         $list = GeneralRedirect::RedirectList();
 
-        $urlsection = Url::fromString(request()->fullUrl())->getPath();
+        $url = Url::fromString(request()->fullUrl());
+
+        if (Str($url->getBasename())->contains('.jpg')){
+            return RedirectController::fullredirect('https://bcsdemophotos.imgix.net/2022/12%20Week%20Apr/Week6/Wed%201st%20Jun%202022/2022-06-01%2017.11.52.jpg?w=500');
+        }
+
+        $urlsection = $url->getPath();
 
         foreach ($list as $urlRedirect){
             if ($urlRedirect[0] == $urlsection ){
@@ -467,9 +473,8 @@ class GeneralRedirect extends Controller
 ['/testimonial?page=1',''],
 ['/testimonial-categories/testimonials-12-week-courses',''],
 ['/testimonial-categories/testimonial-short-courses',''],
-['/user',''],
-['/user/password',''],
-['/users/kaaj19hotmailcom',''],
+['/user','/user'],
+['/user/password','/user'],
 ['/video/ballymaloe-cookery-school',''],
 ['/video/ballymaloe-cookery-school/vine',''],
 ['/video/ballymaloe-method/mayonnaise',''],

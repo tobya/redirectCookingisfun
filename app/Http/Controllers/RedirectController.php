@@ -33,4 +33,21 @@ class RedirectController extends Controller
         }
         return view('show',['url' => $url],);
     }
+
+    public static function fullRedirect($url){
+
+        Log::info('[REDIRECT] ' . request()->fullUrl() . ' =>  ' . $url  );
+        Activity()->withProperties(
+            [   'url' => request()->fullUrl(),
+                'redirect' => $url,
+                'referer' => @$_SERVER['HTTP_REFERER'],
+            ]
+            )
+            ->log('Redirect Happened');;
+
+        if (app()->environment('production')){
+            return redirect($url,301);
+        }
+        return view('show',['url' => $url],);
+    }
 }
