@@ -15,7 +15,7 @@ class GeneralRedirect extends Controller
         $url = Url::fromString(request()->fullUrl());
 
         if (Str($url->getBasename())->contains('.jpg')){
-            return RedirectController::fullredirect('https://bcsdemophotos.imgix.net/2022/12%20Week%20Apr/Week6/Wed%201st%20Jun%202022/2022-06-01%2017.11.52.jpg?w=500');
+            return RedirectController::fullredirect('https://bcsdemophotos.imgix.net/2018/BCS/BM_F%26T_Ad_2016_03.jpg?w=500');
         }
 
         $urlsection = $url->getPath();
