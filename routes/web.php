@@ -36,7 +36,7 @@ Route::get('/cookery-courses/course-details/{courseid}/{?title}',[\App\Http\Cont
 
 Route::get('/cookery-school-alumni/{pastpupil}',[\App\Http\Controllers\BallymaloeCookerySchoolRedirect::class, 'alumni']);
 Route::get('/gallery/{gallery}',[\App\Http\Controllers\BallymaloeCookerySchoolRedirect::class, 'home']);
-Route::get('/organic-farm/{section}',[\App\Http\Controllers\BallymaloeCookerySchoolRedirect::class, 'organicfarm']);
+//Route::get('/organic-farm/{section}',[\App\Http\Controllers\BallymaloeCookerySchoolRedirect::class, 'organicfarm']);
 
 
 Route::get('/recipes.php',[\App\Http\Controllers\RecipeRedirectController::class, 'search']);
