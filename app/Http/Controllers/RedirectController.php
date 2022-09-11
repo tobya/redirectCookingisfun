@@ -19,7 +19,7 @@ class RedirectController extends Controller
         Log::info('[REDIRECT] ' . request()->fullUrl() . ' =>  ' . $url  );
         Activity()->withProperties(
             [   'url' => request()->fullUrl(),
-                'redirect' => $url,
+                'redirect' => (string) $url,
                 'referer' => @$_SERVER['HTTP_REFERER'],
             ]
             )
