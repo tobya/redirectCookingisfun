@@ -17,8 +17,10 @@ class RedirectController extends Controller
         $url = $url->withQueryParameters($queryparams);
         Log::info('[REDIRECT] ' . request()->fullUrl() . ' =>  ' . $url  );
         Activity()->withProperties(['url' => request()->fullUrl(), 'redirect' => $url])->log('Redirect Happened');;
-        //echo 'here';
+
+        if (app()->environment('production')){
+            return redirect($url,301);
+        }
         return view('show',['url' => $url],);
-        return redirect($url,301);
     }
 }
