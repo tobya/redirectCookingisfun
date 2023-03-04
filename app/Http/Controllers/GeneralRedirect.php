@@ -125,7 +125,7 @@ class GeneralRedirect extends Controller
 ['/certificate-cookery-course/weeks-list-sample-week-1',''],
 ['/certificate-cookery-course/weeks-list-sample-week-5',''],
 ['/certificate-cookery-course/wine-studies',''],
-['/certificate-course/12-week-certificate-course-overview',''],
+['/certificate-course/12-week-certificate-course-overview','/certificate-cookery-course/course-outline'],
 ['/certificate-course/frequently-asked-questions',''],
 ['/certificate-course/typical-day',''],
 ['/contact-us/how-find-us',''],
