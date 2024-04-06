@@ -84,7 +84,7 @@ class GeneralRedirect extends Controller
 ['/ballymaloe-cookery-school/social-media-connections',''],
 ['/ballymaloe-cookery-school/student-cottages',''],
 ['/ballymaloe-cookery-school/suppliers/arbutus-bread','{pattern}'],
-['/ballymaloe-cookery-school/terms-and-conditions',''],
+['/ballymaloe-cookery-school/terms-and-conditions','/terms-conditions'],
 ['/ballymaloe-cookery-school/things-do-while-ballymaloe-cookery-school',''],
 ['/ballymaloe-cookery-school/transfer-wise-payment-option',''],
 ['/ballymaloe-cookery-school/tv-series-rachels-coastal-cooking',''],
