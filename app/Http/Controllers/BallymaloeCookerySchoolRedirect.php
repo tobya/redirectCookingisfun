@@ -43,4 +43,10 @@ class BallymaloeCookerySchoolRedirect extends Controller
     public function organicfarm($section){
         return RedirectController::redirect('/organic-farm/' . $section);
     }
+
+    public function tnc()
+    {
+        return RedirectController::redirect('/terms-conditions');
+
+    }
 }

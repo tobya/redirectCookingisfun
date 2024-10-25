@@ -42,6 +42,9 @@ Route::get('/gallery/{gallery}',[\App\Http\Controllers\BallymaloeCookerySchoolRe
 Route::get('/recipes.php',[\App\Http\Controllers\RecipeRedirectController::class, 'search']);
 Route::get('/recipes/{id}/{name}',[\App\Http\Controllers\RecipeRedirectController::class, 'home']);
 
+http://cookingisfun.ie/pages/book_now/terms_conditions.php
+Route::get('/pages/book_now/terms_conditions.php',[\App\Http\Controllers\BallymaloeCookerySchoolRedirect::class, 'tnc']);
+
 
 Route::get('/vouchers',[\App\Http\Controllers\VoucherRedirect::class,'home']);
 Route::get('/vouchers/{package}',[\App\Http\Controllers\VoucherRedirect::class,'home']);
